@@ -1,0 +1,73 @@
+<!doctype html>
+    <html>
+
+    <head>
+        <title>Ubermelon Order Form</title>
+    </head>
+    
+    <body>
+        <h1>order</h1>
+
+        <table>
+            <tr>
+                <th>Melon Name</th>
+                <th>Price per lb</th>
+            </tr>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+            <tr>
+            <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+            <tr>
+                 <td>Cantaloupe</td>
+                <td>$1.29</td>
+            </tr>
+            <tr>
+                 <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+            <tr>
+                 <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+
+        </table>
+
+        <p>Place your orders here! You know you want to</p>
+
+        <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+            First Name:<input type="text" name="firstname"><br>
+            Last Name:<input type="text" name="lastname"><br>
+            Melon Type:
+            <select name="melontype">
+                <option value="watermelon">Watermelon</option>
+                <option value="Honeydew">Honeydew</option>
+                <option value="Cantaloupe">Cantaloupe</option>
+                <option value="Crenshaw">Crenshaw</option>
+                <option value="Canary">Canary</option> 
+            </select><br>
+            Quantity:<input type="text" name="quantity"><br>
+            Delivery Time: 
+                <input type="radio" name="time" value="am">AM
+                <input type="radio" name="time" value="pm">PM
+                <input type="radio" name="time" value="wat">WAT<br>
+            Returning Customer:
+                <input type="radio" name="returning_customer" value="yes">Yes
+                <input type="radio" name="returning_customer" value="no">No<br>
+            Statistics:
+                <input type="checkbox" name="stats" value="Dog">Dog
+                <input type="checkbox" name="stats" value="Cat">Cat
+                <input type="checkbox" name="stats" value="Hedgehog">Hedgehog
+                <input type="checkbox" name="stats" value="Baloonicorn">Baloonicorn
+                <input type="checkbox" name="stats" value="Yak">Yak<br>
+            <input type="submit">
+
+
+        </form>
+
+        <footer>*Quantities given are by the flat.</footer>
+
+    </body>
